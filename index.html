@@ -195,7 +195,7 @@
 
                         <div class="flex gap-4  rounded-xl bg-green-200 px-6   py-4 ">
                             <img src="images/seat-green.png" alt="">
-                            <p class="text-[#1DD100]  text-lg font-medium">8 Seats left</p>
+                            <p class="text-[#1DD100]  text-lg font-medium"><span id="current-seat">8</span> Seats left</p>
                         </div>
                     </div>
 
@@ -247,39 +247,39 @@
                         <img src="images/Group 56.png" alt="">
                     </div>
 
-                    <div  class="grid grid-cols-4 gap-12">
-                        <button id="A1" class="btn border-b-2 border-gray-400">A1</button>
-                        <button id="A2" class="btn border-b-2 border-gray-400">A2</button>
-                        <button id="A3" class="btn border-b-2 border-gray-400">A3</button>
-                        <button id="A4" class="btn border-b-2 border-gray-400">A4</button>
-                        <button id="B1" class="btn border-b-2 border-gray-400">B1</button>
-                        <button id="B2" class="btn border-b-2 border-gray-400">B2</button>
-                        <button id="B3" class="btn border-b-2 border-gray-400">B3</button>
-                        <button id="B4" class="btn border-b-2 border-gray-400">B4</button>
-                        <button id="C1" class="btn border-b-2 border-gray-400">C1</button>
-                        <button id="C2" class="btn border-b-2 border-gray-400">C2</button>
-                        <button id="C3" class="btn border-b-2 border-gray-400">C3</button>
-                        <button id="C4" class="btn border-b-2 border-gray-400">C4</button>
-                        <button id="D1" class="btn border-b-2 border-gray-400">D1</button>
-                        <button id="D2" class="btn border-b-2 border-gray-400">D2</button>
-                        <button id="D3" class="btn border-b-2 border-gray-400">D3</button>
-                        <button id="D4" class="btn border-b-2 border-gray-400">D4</button>
-                        <button id="E1" class="btn border-b-2 border-gray-400">E1</button>
-                        <button id="E2" class="btn border-b-2 border-gray-400">E2</button>
-                        <button id="E3" class="btn border-b-2 border-gray-400">E3</button>
-                        <button id="E4" class="btn border-b-2 border-gray-400">E4</button>
-                        <button id="F1" class="btn border-b-2 border-gray-400">F1</button>
-                        <button id="F2" class="btn border-b-2 border-gray-400">F2</button>
-                        <button id="F3" class="btn border-b-2 border-gray-400">F3</button>
-                        <button id="F4" class="btn border-b-2 border-gray-400">F4</button>
-                        <button id="G1" class="btn border-b-2 border-gray-400">G1</button>
-                        <button id="G2" class="btn border-b-2 border-gray-400">G2</button>
-                        <button id="G3" class="btn border-b-2 border-gray-400">G3</button>
-                        <button id="G4" class="btn border-b-2 border-gray-400">G4</button>
-                        <button id="h1" class="btn border-b-2 border-gray-400">h1</button>
-                        <button id="h2" class="btn border-b-2 border-gray-400">h2</button>
-                        <button id="h3" class="btn border-b-2 border-gray-400">h3</button>
-                        <button id="h4" class="btn border-b-2 border-gray-400">h4</button>
+                    <div id="current-alphabet" class="grid grid-cols-4 gap-12 text-3xl">
+                        <button id="A1" class="btn text-xl add-btn border-b-2 border-gray-400">A1</button>
+                        <button id="A2" class="btn text-xl add-btn border-b-2 border-gray-400">A2</button>
+                        <button id="A3" class="btn text-xl add-btn border-b-2 border-gray-400">A3</button>
+                        <button id="A4" class="btn text-xl add-btn border-b-2 border-gray-400">A4</button>
+                        <button id="B1" class="btn text-xl add-btn border-b-2 border-gray-400">B1</button>
+                        <button id="B2" class="btn text-xl add-btn border-b-2 border-gray-400">B2</button>
+                        <button id="B3" class="btn text-xl add-btn border-b-2 border-gray-400">B3</button>
+                        <button id="B4" class="btn text-xl add-btn border-b-2 border-gray-400">B4</button>
+                        <button id="C1" class="btn text-xl add-btn border-b-2 border-gray-400">C1</button>
+                        <button id="C2" class="btn text-xl add-btn border-b-2 border-gray-400">C2</button>
+                        <button id="C3" class="btn text-xl add-btn border-b-2 border-gray-400">C3</button>
+                        <button id="C4" class="btn text-xl add-btn border-b-2 border-gray-400">C4</button>
+                        <button id="D1" class="btn text-xl add-btn border-b-2 border-gray-400">D1</button>
+                        <button id="D2" class="btn text-xl add-btn border-b-2 border-gray-400">D2</button>
+                        <button id="D3" class="btn text-xl add-btn border-b-2 border-gray-400">D3</button>
+                        <button id="D4" class="btn text-xl add-btn border-b-2 border-gray-400">D4</button>
+                        <button id="E1" class="btn text-xl add-btn border-b-2 border-gray-400">E1</button>
+                        <button id="E2" class="btn text-xl add-btn border-b-2 border-gray-400">E2</button>
+                        <button id="E3" class="btn text-xl add-btn border-b-2 border-gray-400">E3</button>
+                        <button id="E4" class="btn text-xl add-btn border-b-2 border-gray-400">E4</button>
+                        <button id="F1" class="btn text-xl add-btn border-b-2 border-gray-400">F1</button>
+                        <button id="F2" class="btn text-xl add-btn border-b-2 border-gray-400">F2</button>
+                        <button id="F3" class="btn text-xl add-btn border-b-2 border-gray-400">F3</button>
+                        <button id="F4" class="btn text-xl add-btn border-b-2 border-gray-400">F4</button>
+                        <button id="G1" class="btn text-xl add-btn border-b-2 border-gray-400">G1</button>
+                        <button id="G2" class="btn text-xl add-btn border-b-2 border-gray-400">G2</button>
+                        <button id="G3" class="btn text-xl add-btn border-b-2 border-gray-400">G3</button>
+                        <button id="G4" class="btn text-xl add-btn border-b-2 border-gray-400">G4</button>
+                        <button id="h1" class="btn text-xl add-btn border-b-2 border-gray-400">h1</button>
+                        <button id="h2" class="btn text-xl add-btn border-b-2 border-gray-400">h2</button>
+                        <button id="h3" class="btn text-xl add-btn border-b-2 border-gray-400">h3</button>
+                        <button id="h4" class="btn text-xl add-btn border-b-2 border-gray-400">h4</button>
 
                     </div>
 
@@ -298,12 +298,12 @@
 
                         </div>
 
-                        <div class="flex   text-lg font-bold justify-between">
+                        <div class="flex   text-lg  justify-between">
 
-                            <table class="w-full text-center">
+                            <table class="w-full text-left">
                                 <thead>
                                     <tr>
-                                        <th>Seat</th>
+                                        <th>Seat <span id="selected-seat" class="bg-[#1DD100] px-4 rounded-md text-white ">0</span></th>
                                         <th>Class</th>
                                         <th>Price</th>
                                     </tr>
