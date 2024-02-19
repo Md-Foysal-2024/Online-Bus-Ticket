@@ -38,8 +38,6 @@ for (const btn of allBtn) {
         tr.appendChild(td3);
         seatInformation.appendChild(tr)
 
-        const selectSeatNumber = document.getElementById("A1");
-        selectSeatNumber.innerText = seatName;
         addBackgroundColorById(seatName);
 
     })
