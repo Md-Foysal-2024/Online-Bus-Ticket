@@ -226,7 +226,7 @@
         </section>
 
         <!-- Seat Select section start here-->
-        <section class="container mx-auto px-12 py-12">
+        <section class="container mx-auto px-12 py-12 ">
             <div class="flex flex-col lg:flex-row justify-start gap-36">
 
 
@@ -289,7 +289,7 @@
 
                 <!-- Seat Count  here-->
 
-                <div class="flex  flex-col gap-8">
+                <div class="flex  flex-col gap-8 border-l-2  border-[#1DD100] border-dashed pl-28">
                     <div class=" flex flex-col gap-10">
 
                         <div class="flex justify-start">
@@ -309,9 +309,10 @@
                         </div>
                         <div class="flex   justify-between">
 
-                            <input class=" border-2 rounded-tl-lg rounded-bl-lg w-full pl-6 pr-48  py-4" type="text"
+                            <input class=" border-2 rounded-tl-lg rounded-bl-lg w-full pl-6 pr-48  " type="text"
                                 placeholder="Have any coupon?">
-                            <button class="btn text-xl  px-8 py-4 font-bold bg-[#27AE60]">Apply</button>
+                            <button
+                                class=" text-xl  px-8 py-4  rounded-tr-lg rounded-br-lg font-bold bg-[#27AE60]">Apply</button>
                         </div>
 
 
@@ -342,35 +343,40 @@
 
 
                         <!-- Open the modal using ID.showModal() method -->
-                        <button
-                            class="btn btn-info  border-none text-xl font-bold bg-[#27AE60] mt-10 pl-10 pr-10 capitalize"
-                            onclick="my_modal_5.showModal()">Next</button>
-                        <div class=" text-center justify-center ">
-                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
-                                <form method="dialog" class="modal-box ">
-                                    <div class=" align-middle   ">
-                                        <div>
-                                            <img id="image" class="w-40 mt-8 mx-auto " src="images/success.png" alt="">
-                                        </div>
-                                        <div class="mt-10">
-                                            <h3 class="font-bold text-2xl  text-[#27AE60]">SUCCESS</h3>
-                                            <h4 class="font-bold  ">Thank you for Booking Our Bus Seats. <br>
-                                                Working hard to find the best service and deals for you. </h4>
-                                            <p class="py-2 ">Shortly you will find a confirmation in your email.</p>
-                                        </div>
-                                        <div class="modal-action justify-center">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                            <button
-                                                class="btn btn-info text-lg  text-slate-100  border-none rounded-full bg-[#27AE60] my-4 pl-10 pr-10 capitalize">Continue</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </dialog>
-                        </div>
 
-                        <div class="flex justify-between gap-4">
-                            <p class="border-b border-gray-400 ">Terms and Conditions</p>
-                            <p class="border-b border-gray-400 ">Cancellation Policy</p>
+                        <div class=" flex flex-col gap-2">
+
+                            <button
+                                class="btn btn-info  w-full border-none text-xl font-bold bg-[#27AE60] mt-10 pl-10 pr-10 capitalize"
+                                onclick="my_modal_5.showModal()">Next</button>
+                            <div class=" text-center justify-center ">
+                                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+                                    <form method="dialog" class="modal-box ">
+                                        <div class=" align-middle   ">
+                                            <div>
+                                                <img id="image" class="w-40 mt-8 mx-auto " src="images/success.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="mt-10">
+                                                <h3 class="font-bold text-2xl  text-[#27AE60]">SUCCESS</h3>
+                                                <h4 class="font-bold  ">Thank you for Booking Our Bus Seats. <br>
+                                                    Working hard to find the best service and deals for you. </h4>
+                                                <p class="py-2 ">Shortly you will find a confirmation in your email.</p>
+                                            </div>
+                                            <div class="modal-action justify-center">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button
+                                                    class="btn btn-info text-lg  text-slate-100  border-none rounded-full bg-[#27AE60] my-4 pl-10 pr-10 capitalize">Continue</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </dialog>
+                            </div>
+
+                            <div class="flex justify-between gap-4">
+                                <p class="border-b border-gray-400 ">Terms and Conditions</p>
+                                <p class="border-b border-gray-400 ">Cancellation Policy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
