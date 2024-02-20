@@ -7,11 +7,13 @@ let totalPrice = 0;
 for (const seat of allSeats) {
     seat.addEventListener("click", function (e) {
 
+
+        if (seatCount > 3) {
+            alert("Sorry You Can not select more than 4 seats");
+            return seatCount;
+        }
         seatCount = seatCount + 1;
         setInnerText("selected-seat", seatCount);
-        if (seatCount > 4) {
-            alert("Sorry You Can not select more than 4 seats");
-        }
         seatLess = seatLess - 1;
         setInnerText("current-seat", seatLess);
 
