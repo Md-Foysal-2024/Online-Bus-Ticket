@@ -1,19 +1,21 @@
-const allBtn = document.getElementsByClassName("add-btn");
-let count = 0;
-let less = 8;
+const allSeats = document.getElementsByClassName("add-btn");
 
-for (const btn of allBtn) {
-    btn.addEventListener("click", function (e) {
+let seatCount = 0;
+let seatLess = 40;
+let totalPrice = 0;
 
-        count = count + 1;
-        setInnerText("selected-seat", count)
-        if (count > 4) {
+for (const seat of allSeats) {
+    seat.addEventListener("click", function (e) {
+
+        seatCount = seatCount + 1;
+        setInnerText("selected-seat", seatCount);
+        if (seatCount > 4) {
             alert("Sorry You Can not select more than 4 seats");
         }
-        less = less - 1;
-        setInnerText("current-seat", less)
+        seatLess = seatLess - 1;
+        setInnerText("current-seat", seatLess);
 
-        if (less === 0) {
+        if (seatLess === 0) {
             alert("Seat is not available");
         }
 
@@ -22,24 +24,33 @@ for (const btn of allBtn) {
 
         const seatInformation = document.getElementById("seat-info");
 
-        const tr = document.createElement("tr")
+        const tr = document.createElement("tr");
 
-        const td = document.createElement("td")
+        const td = document.createElement("td");
         td.innerText = seatName;
 
-        const td2 = document.createElement("td")
-        td2.innerText = "Economy"
+        const td2 = document.createElement("td");
+        td2.innerText = "economy"
 
         const td3 = document.createElement("td");
         td3.innerText = "550"
+        // console.log(typeof  td3.innerText);
 
         tr.appendChild(td);
         tr.appendChild(td2);
         tr.appendChild(td3);
-        seatInformation.appendChild(tr)
+        seatInformation.appendChild(tr);
 
-        addBackgroundColorById(seatName);
+        setBackgroundColorById(seatName);
 
+
+        const ticketPrice = parseFloat(td3.innerText);
+        // console.log(typeof ticketPrice);
+
+        totalPrice = totalPrice + ticketPrice;
+        console.log(totalPrice);
+
+        document.getElementById("total-price").innerText = totalPrice;
     })
 
 }
@@ -50,7 +61,7 @@ function setInnerText(elementId, value) {
 
 }
 
-function addBackgroundColorById(elementId) {
+function setBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add("bg-[#1DD100]");
     element.classList.add("text-white");
