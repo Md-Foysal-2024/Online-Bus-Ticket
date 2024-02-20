@@ -43,14 +43,12 @@ for (const seat of allSeats) {
 
         setBackgroundColorById(seatName);
 
-
         const ticketPrice = parseFloat(td3.innerText);
-        // console.log(typeof ticketPrice);
-
         totalPrice = totalPrice + ticketPrice;
-        console.log(totalPrice);
-
         document.getElementById("total-price").innerText = totalPrice;
+
+
+        document.getElementById("grand-total").innerText = totalPrice;
     })
 
 }
@@ -67,3 +65,52 @@ function setBackgroundColorById(elementId) {
     element.classList.add("text-white");
 
 }
+
+
+const applyBtn = document.getElementById("apply-btn");
+// console.log(applyBtn.innerText);
+applyBtn.addEventListener("click", function (e) {
+
+    const couponElement = document.getElementById("input-field").value;
+    // console.log(couponElement.value);
+
+    // const couponCode = couponElement.split(" ").join("").toUpperCase();
+    const couponCode = couponElement;
+    console.log(couponCode);
+
+
+    if (totalPrice >= 2200) {
+        if (couponCode === "NEW15") {
+
+            const discountPrice = document.getElementById("discount-price");
+            const discountAmount = totalPrice * 0.15;
+            discountPrice.innerText = discountAmount.toFixed(2);
+
+            const discountTotal = document.getElementById("grand-total");
+            discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
+            document.getElementById("input-field").value="";
+        }
+        else if (couponCode === "Couple 20") {
+
+            const discountPrice = document.getElementById("discount-price");
+            const discountAmount = totalPrice * 0.2;
+            discountPrice.innerText = discountAmount.toFixed(2);
+
+            const discountTotal = document.getElementById("grand-total");
+            discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
+            document.getElementById("input-field").value="";
+
+        }
+        else {
+            alert("Invalid Coupon");
+        }
+
+    }
+    else {
+        alert("Please Select 4 seats")
+    }
+
+
+
+
+})
