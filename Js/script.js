@@ -22,7 +22,6 @@ for (const seat of allSeats) {
         }
 
         const seatName = e.target.innerText
-        // console.log(e.target.innerText);
 
         const seatInformation = document.getElementById("seat-info");
 
@@ -36,7 +35,6 @@ for (const seat of allSeats) {
 
         const td3 = document.createElement("td");
         td3.innerText = "550"
-        // console.log(typeof  td3.innerText);
 
         tr.appendChild(td);
         tr.appendChild(td2);
@@ -69,25 +67,20 @@ function setBackgroundColorById(elementId) {
 }
 
 
-
 function hiddenElementById(elementId) {
     const element = document.getElementById(elementId)
     element.classList.add('hidden');
 }
 
 
-
 const applyBtn = document.getElementById("apply-btn");
-// console.log(applyBtn.innerText);
+
 applyBtn.addEventListener("click", function (e) {
 
     const couponElement = document.getElementById("input-field").value;
-    // console.log(couponElement.value);
 
-    // const couponCode = couponElement.split(" ").join("").toUpperCase();
     const couponCode = couponElement;
     console.log(couponCode);
-
 
     if (totalPrice >= 2200) {
         if (couponCode === "NEW15") {
@@ -98,7 +91,7 @@ applyBtn.addEventListener("click", function (e) {
 
             const discountTotal = document.getElementById("grand-total");
             discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
-            document.getElementById("input-field").value="";
+            document.getElementById("input-field").value = "";
 
             hiddenElementById("coupon-field");
         }
@@ -110,20 +103,30 @@ applyBtn.addEventListener("click", function (e) {
 
             const discountTotal = document.getElementById("grand-total");
             discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
-            document.getElementById("input-field").value="";
+            document.getElementById("input-field").value = "";
             hiddenElementById("coupon-field");
         }
         else {
             alert("Invalid Coupon");
-            document.getElementById("input-field").value="";
+            document.getElementById("input-field").value = "";
         }
 
     }
     else {
-        alert("Please Select 4 seats")
+        alert("Please Select 4 seats");
     }
 
-
-
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+

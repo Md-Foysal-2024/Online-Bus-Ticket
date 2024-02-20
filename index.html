@@ -26,7 +26,9 @@
 
 <body>
     <!-- Header Section Starts Here -->
+
     <header class="container mx-auto mt-4">
+        
         <!-- Navbar Section Starts Here -->
         <nav>
             <div class="navbar bg-base-100">
@@ -179,7 +181,7 @@
             <h2 class="font-raleway  text-center text-4xl lg:text-5xl font-bold mt-8 py-8 "> <span class="text-[#1DD100]">Green Line </span>Paribahan</h2>
             <p class="text-sm px-4 lg:text-lg ">We have an excellent system of taking service based on preference, as there is <br> ticketing service   for multiple routes via different categories of buses.</p>
             <div class="flex flex-col lg:flex-row  my-8 justify-evenly items-center">
-                <div class=" flex flex-col  gap-12">
+                <div class=" flex flex-col px-6 lg:px-0 gap-12">
 
                     <div class="flex flex-col lg:flex-row my-8 gap-8 lg:gap-96 justify-around items-center ">
                         <div class="flex flex-row gap-6 text-left">
@@ -212,12 +214,16 @@
                     </div>
 
                 </div>
-                <img class=" " src="images/info-devider.png" alt="">
-                <div class="flex  flex-col gap-2 items-center">
-                    <img class="w-16" src="images/fare.png" alt="">
-                    <h2 class="text-3xl font-raleway font-bold">550 Taka</h2>
-                    <p class="text-slate-500 text-lg">Per Seat</p>
+
+                <div class=" flex items-center justify-start gap-32 mt-12"> 
+                    <img class=" " src="images/info-devider.png" alt="">
+                    <div class="flex  flex-col gap-2 items-center">
+                        <img class="w-16" src="images/fare.png" alt="">
+                        <h2 class="text-3xl font-raleway font-bold">550 Taka</h2>
+                        <p class="text-slate-500 text-lg">Per Seat</p>
+                    </div>
                 </div>
+                
             </div>
 
         </section>
@@ -277,10 +283,10 @@
                         <button id="H2" class="btn text-xl add-btn border-b-2 border-gray-400">H2</button>
                         <button id="H3" class="btn text-xl add-btn border-b-2 border-gray-400">H3</button>
                         <button id="H4" class="btn text-xl add-btn border-b-2 border-gray-400">H4</button>
-                        <button id="I1" class="btn text-xl add-btn border-b-2 border-gray-400">G1</button>
-                        <button id="I2" class="btn text-xl add-btn border-b-2 border-gray-400">G2</button>
-                        <button id="I3" class="btn text-xl add-btn border-b-2 border-gray-400">G3</button>
-                        <button id="I4" class="btn text-xl add-btn border-b-2 border-gray-400">G4</button>
+                        <button id="I1" class="btn text-xl add-btn border-b-2 border-gray-400">I1</button>
+                        <button id="I2" class="btn text-xl add-btn border-b-2 border-gray-400">I2</button>
+                        <button id="I3" class="btn text-xl add-btn border-b-2 border-gray-400">I3</button>
+                        <button id="I4" class="btn text-xl add-btn border-b-2 border-gray-400">I4</button>
                         <button id="J1" class="btn text-xl add-btn border-b-2 border-gray-400">J1</button>
                         <button id="J2" class="btn text-xl add-btn border-b-2 border-gray-400">J2</button>
                         <button id="J3" class="btn text-xl add-btn border-b-2 border-gray-400">J3</button>
@@ -294,7 +300,7 @@
 
                 <!-- Seat Count  here-->
 
-                <div class="flex  flex-col gap-8 border-l-2  border-[#1DD100] border-dashed pl-28">
+                <div class="flex  flex-col gap-8 border-l-2  border-[#1DD100] border-dashed pl-12 lg:pl-28">
                     <div class=" flex flex-col gap-10">
 
                         <div class="flex justify-start">
@@ -353,7 +359,7 @@
 
                         <div>
                             <p class=" text-xl pb-2 font-bold">Phone Number*</p>
-                            <input class=" border-2 rounded-lg w-full pl-6 py-4" type="number"
+                            <input id="number-field" class=" border-2 rounded-lg w-full pl-6 py-4" type="tel"
                                 placeholder="Enter your phone number">
                         </div>
                         <div>
@@ -363,7 +369,7 @@
                         </div>
 
 
-                        <!-- Open the modal using ID.showModal() method -->
+                        <!--  Modal Button  Here  -->
 
                         <div class=" flex flex-col gap-2">
 
@@ -402,20 +408,9 @@
                     </div>
                 </div>
 
-
-
         </section>
 
-
-
     </main>
-
-
-
-
-
-
-
 
 
     <!-- Footer Section Started From Here -->
@@ -425,7 +420,7 @@
 
             <div class=" flex flex-col  lg:flex-row  gap-16 items-center justify-between">
                 <div class=" flex flex-col items-center lg:items-start space-y-5">
-                    <h2 class="text-4xl cursor-pointer font-extrabold">Bus-<span class="text-[#FF4240]">Ticket</span></h2>
+                    <h2 class="text-4xl font-extrabold"><span class="text-[#1DD100]">Green Line</span></h2>
                     <p class="text-center lg:text-left">P-Ticket is a digital platform to make your <br>
                         daily commuting better.</p>
 
