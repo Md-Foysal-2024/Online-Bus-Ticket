@@ -67,6 +67,14 @@ function setBackgroundColorById(elementId) {
 }
 
 
+
+function hiddenElementById(elementId) {
+    const element = document.getElementById(elementId)
+    element.classList.add('hidden');
+}
+
+
+
 const applyBtn = document.getElementById("apply-btn");
 // console.log(applyBtn.innerText);
 applyBtn.addEventListener("click", function (e) {
@@ -89,6 +97,8 @@ applyBtn.addEventListener("click", function (e) {
             const discountTotal = document.getElementById("grand-total");
             discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
             document.getElementById("input-field").value="";
+
+            hiddenElementById("coupon-field");
         }
         else if (couponCode === "Couple 20") {
 
@@ -99,10 +109,11 @@ applyBtn.addEventListener("click", function (e) {
             const discountTotal = document.getElementById("grand-total");
             discountTotal.innerText = totalPrice - discountAmount.toFixed(2);
             document.getElementById("input-field").value="";
-
+            hiddenElementById("coupon-field");
         }
         else {
             alert("Invalid Coupon");
+            document.getElementById("input-field").value="";
         }
 
     }
